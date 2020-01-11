@@ -12,7 +12,7 @@ body, html {
     overflow-x: hidden;
 
     font-family: 'Open Sans', sans-serif;
-    font-weight: 600;
+    font-weight: 100;
 }
 
 // No media query designed for SCREEN_SIZE < 768px by default.
@@ -33,34 +33,6 @@ body, html {
     color: $primary-bg-color;
     margin: 12px 20px;
 }
-
-// .nav-icon {
-//     padding: 1em 0.5em 0em 1em;
-//     width: 60px;
-// }
-
-// .nav-icon:after, 
-// .nav-icon:before, 
-// .nav-icon div {
-//     background-color: $primary-bg-color;
-//     border-radius: 3px;
-//     content: '';
-//     display: block;
-//     height: 5px;
-//     margin: 7px 0;
-//     transition: all .2s ease-in-out;
-
-//     // text-shadow: 500px 500px black;
-// }
-// .nav-icon:hover:before {
-//     transform: translateY(12px) rotate(135deg);
-// }
-// .nav-icon:hover:after {
-//     transform: translateY(-12px) rotate(-135deg);
-// }
-// .nav-icon:hover div {
-//     transform: scale(0);
-// }
 
 .nav-links {
         display: block;
