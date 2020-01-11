@@ -1,0 +1,139 @@
+@import "./variables.scss";
+@import "./resets.scss";
+
+// Universal Selector:
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+body, html {
+    overflow-x: hidden;
+
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 600;
+}
+
+// No media query designed for SCREEN_SIZE < 768px by default.
+
+// Navbar:
+
+.navbar {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    position: fixed;
+    width: 100vw;
+
+    background-color: $theme-color;
+}
+
+.navbar i {
+    color: $primary-bg-color;
+    margin: 12px 20px;
+}
+
+// .nav-icon {
+//     padding: 1em 0.5em 0em 1em;
+//     width: 60px;
+// }
+
+// .nav-icon:after, 
+// .nav-icon:before, 
+// .nav-icon div {
+//     background-color: $primary-bg-color;
+//     border-radius: 3px;
+//     content: '';
+//     display: block;
+//     height: 5px;
+//     margin: 7px 0;
+//     transition: all .2s ease-in-out;
+
+//     // text-shadow: 500px 500px black;
+// }
+// .nav-icon:hover:before {
+//     transform: translateY(12px) rotate(135deg);
+// }
+// .nav-icon:hover:after {
+//     transform: translateY(-12px) rotate(-135deg);
+// }
+// .nav-icon:hover div {
+//     transform: scale(0);
+// }
+
+.nav-links {
+        display: block;
+        position: absolute;
+
+        // background-color: rgba(128, 128, 128, 0.2);
+        // border: 2px solid;
+
+        width: 100vw;
+        top: 72px;
+    }
+
+    .nav-links li {
+        list-style-type: none;
+        margin: 15px 5px;
+
+        background-color: rgba(128, 128, 128, 0.2);
+        border: 2px black solid;
+        margin: 0px;
+    }
+
+    .nav-links a {
+        color: $light-text-color;
+        text-decoration: none;
+
+        font-size: 1.5em;
+
+        transition: all 0s linear 0s;
+    }
+
+    .nav-links a:hover {
+        color: $light-hover-text-color;
+
+        transition: all 0s linear 0s;
+    }
+
+@media screen and (min-width: 768px) {
+    .navbar .fa-bars {
+    display: none;
+}
+
+    .nav-links {
+        display: flex;
+        justify-content: flex-start; 
+        position: static;
+
+        margin: 20px;
+
+        width: 100vw;
+    }
+
+    .nav-links li {
+        list-style-type: none;
+        margin: 15px 5px;
+
+        background-color: transparent;
+        border: none;
+        margin: 0px;
+    }
+
+    .nav-links a {
+        color: $light-text-color;
+        text-decoration: none;
+
+        margin: 10px;
+        font-size: 1.75rem;
+
+        transition: all 0s linear 0s;
+    }
+
+    .nav-links a:hover {
+        color: $light-hover-text-color;
+
+        transition: all 0s linear 0s;
+    }
+}
