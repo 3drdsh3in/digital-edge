@@ -1,0 +1,22 @@
+{
+  "name": "digital-inception",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/3drdsh3in/digital-inception.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/3drdsh3in/digital-inception/issues"
+  },
+  "homepage": "https://github.com/3drdsh3in/digital-inception#readme",
+  "dependencies": {
+    "jquery": "^3.4.1"
+  }
+}
