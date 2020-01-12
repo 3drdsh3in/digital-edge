@@ -1,5 +1,6 @@
 const navLinksRef = document.querySelector(".nav-links");
-const barsRef = document.querySelector(".fa-bars");
+// const barsRef = document.querySelector(".fa-bars");
+const barsRef = document.querySelector(".nav-icon");
 
 const phoneWidthObject = window.matchMedia("(min-width: 768px)");
 // Only runs toggleLinks whenever there is a change to any
@@ -7,6 +8,11 @@ const phoneWidthObject = window.matchMedia("(min-width: 768px)");
 phoneWidthObject.addListener(toggleLinks);
 
 function toggleLinks(mediaObject) {
+    if (document.querySelector('.animate1') != null) {
+        $(".nav-icon .first").toggleClass('animate1');
+        $(".nav-icon .middle").toggleClass('animate2');
+        $(".nav-icon .last").toggleClass('animate3');
+    }
     if (mediaObject.matches) {
         navLinksRef.style.display = "flex";
         console.log('a')
@@ -26,3 +32,38 @@ barsRef.addEventListener("click", () => {
         navLinksRef.style.display = "none";
     }
 })
+
+// Bars animation to & from cross:
+$(document).ready(function () {
+
+    $(".nav-icon").click(function () {
+        $(".nav-icon .first").toggleClass('animate1');
+    });
+
+    $(".nav-icon").click(function () {
+        $(".nav-icon .middle").toggleClass('animate2');
+    });
+    $(".nav-icon").click(function () {
+        $(".nav-icon .last").toggleClass('animate3');
+    });
+
+
+
+    $(".nav-link").click(function () {
+        if (phoneWidthObject.matches == false) {
+            $(".nav-icon .first").toggleClass('animate1');
+            $(".nav-icon .middle").toggleClass('animate2');
+            $(".nav-icon .last").toggleClass('animate3');
+            if (document.querySelector(".nav-links").style.display == "block") {
+                $(".nav-links").css("display", "none")
+            }
+            else {
+                $(".nav-links").css("display", "block")
+            }
+        }
+    })
+});
+
+// .nav-icon:after
+// .nav-icon:before
+// .nav-icon div

@@ -25,6 +25,7 @@ body, html {
   position: fixed;
   width: 100vw;
   background-color: #b3b3b3d0;
+  z-index: 1000;
 }
 
 .navbar i {
@@ -33,7 +34,7 @@ body, html {
 }
 
 .nav-links {
-  display: block;
+  display: none;
   position: absolute;
   width: 100vw;
   top: 72px;
@@ -42,27 +43,26 @@ body, html {
 .nav-links li {
   list-style-type: none;
   margin: 15px 5px;
-  background-color: rgba(128, 128, 128, 0.2);
-  border: 2px black solid;
+  background-color: #fff;
   margin: 0px;
 }
 
-.nav-links a {
-  color: #fff;
+.nav-link {
+  color: black;
   text-decoration: none;
   font-size: 1.5em;
   -webkit-transition: all 0s linear 0s;
   transition: all 0s linear 0s;
 }
 
-.nav-links a:hover {
-  color: rgba(255, 255, 255, 0.8);
+.nav-link:hover {
+  color: rgba(0, 0, 0, 0.5);
   -webkit-transition: all 0s linear 0s;
   transition: all 0s linear 0s;
 }
 
 @media screen and (min-width: 768px) {
-  .navbar .fa-bars {
+  .navbar .nav-icon {
     display: none;
   }
   .nav-links {
@@ -103,9 +103,9 @@ body, html {
   width: 40px;
 }
 
-.nav-icon:after,
-.nav-icon:before,
-.nav-icon div {
+.nav-icon .first,
+.nav-icon .last,
+.nav-icon .middle {
   background-color: #fff;
   border-radius: 3px;
   content: '';
@@ -116,18 +116,44 @@ body, html {
   transition: all .2s ease-in-out;
 }
 
-.nav-icon:hover:before {
+.animate1 {
   -webkit-transform: translateY(12px) rotate(135deg);
           transform: translateY(12px) rotate(135deg);
 }
 
-.nav-icon:hover:after {
+.animate3 {
   -webkit-transform: translateY(-12px) rotate(-135deg);
           transform: translateY(-12px) rotate(-135deg);
 }
 
-.nav-icon:hover div {
+.animate2 {
   -webkit-transform: scale(0);
           transform: scale(0);
+}
+
+.header-left {
+  background-color: #DB5461;
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -60%;
+  width: 100%;
+  height: 50rem;
+  -webkit-transform: skew(10deg);
+          transform: skew(10deg);
+  z-index: 0;
+}
+
+.header-right {
+  width: 100%;
+  height: 50rem;
+  background: #DB5461 url(../images/group-of-people-sitting-near-table-1181396.jpg) no-repeat left;
+  background-size: cover;
+  z-index: -1;
+}
+
+.header-left-contents {
+  position: absolute;
+  z-index: 1;
 }
 /*# sourceMappingURL=style.css.map */
