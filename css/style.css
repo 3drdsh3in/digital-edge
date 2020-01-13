@@ -7,7 +7,7 @@
 
 body, html {
   overflow-x: hidden;
-  font-family: 'Open Sans', sans-serif;
+  font-family: "Open Sans", sans-serif;
   font-weight: 100;
 }
 
@@ -44,6 +44,7 @@ body, html {
   list-style-type: none;
   margin: 15px 5px;
   background-color: #fff;
+  height: 35px;
   margin: 0px;
 }
 
@@ -131,7 +132,12 @@ body, html {
           transform: scale(0);
 }
 
-.header-left {
+.main-header {
+  text-transform: uppercase;
+  position: relative;
+}
+
+.header-left::after {
   background-color: #DB5461;
   content: '';
   position: absolute;
@@ -139,9 +145,11 @@ body, html {
   left: -60%;
   width: 100%;
   height: 50rem;
+  -webkit-transform-origin: 100% 0;
+          transform-origin: 100% 0;
   -webkit-transform: skew(10deg);
           transform: skew(10deg);
-  z-index: 0;
+  z-index: 1;
 }
 
 .header-right {
@@ -153,7 +161,195 @@ body, html {
 }
 
 .header-left-contents {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
   position: absolute;
+  top: 8rem;
+  left: 3rem;
+  z-index: 3;
+  color: #fff;
+}
+
+.header-left-contents div {
+  margin: 0px 5px;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+  color: #fff;
+  font-weight: 100;
+}
+
+.header-left-contents .header-name {
+  width: 5vw;
+  font-size: 1.9rem;
+  font-weight: 500;
+}
+
+.header-left-summary {
+  display: block;
+  margin: 2rem 0;
+  position: absolute;
+  left: 3rem;
+  top: 24rem;
+  z-index: 3;
+  font-size: 2rem;
+}
+
+.header-left-summary p {
+  color: #fff;
+  font-weight: 800;
+  width: 50vw;
+}
+
+.span-digitalize {
+  color: black;
+}
+
+.header-button {
+  position: absolute;
+  left: 3.5rem;
+  top: 40rem;
+  z-index: 3;
+}
+
+.header-button button {
+  font-size: 1rem;
+  font-weight: 700;
+  padding: 10px 30px;
+  text-transform: uppercase;
+  border: 5px black solid;
+  border-radius: 40px;
+}
+
+.summary-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  color: #fff;
+  background-color: #30343F;
+  padding: 2rem 0;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.summary-item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin: 2rem 0;
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 34%;
+          flex: 1 1 34%;
+}
+
+.summary-item p {
+  margin: 0px 0.8rem;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+}
+
+.plan-body {
+  background-color: #fff;
+  position: relative;
+  margin: 4rem 0;
+}
+
+.plan-title {
+  text-align: center;
+  text-transform: uppercase;
+  font-weight: 700;
+  font-size: 1.5rem;
+}
+
+.plan-body hr {
+  background-color: #30343F;
+  width: 5%;
+  height: 3px;
+  margin: 1.5rem auto;
+}
+
+.fa-chevron-left,
+.fa-chevron-right {
+  color: #30343F;
+  position: relative;
   z-index: 1;
+  top: 90px;
+  cursor: pointer;
+}
+
+.fa-chevron-left {
+  right: 41.5%;
+}
+
+.fa-chevron-right {
+  left: 41.5%;
+}
+
+.carousel-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.carousel-item {
+  -webkit-box-shadow: 2px 2px 20px 1px rgba(0, 0, 0, 0.2);
+          box-shadow: 2px 2px 20px 1px rgba(0, 0, 0, 0.2);
+  position: absolute;
+  width: 80%;
+  margin: 0 0 5rem 0;
+}
+
+.carousel-item div {
+  text-align: center;
+  padding: 0.5rem;
+}
+
+.carousel-item .plan-name {
+  background-color: #30343F;
+  color: #fff;
+  text-transform: uppercase;
+  font-weight: 700;
+  font-size: 1.2rem;
+}
+
+.plan-name.pro {
+  background-color: #DB5461;
+}
+
+.plan-element {
+  border: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.item-footer button {
+  color: #DB5461;
+  border: 2px solid #DB5461;
+  background-color: #fff;
+  border-radius: 10px;
+  padding: 0.4rem 3rem;
+  margin: 1rem 0;
+}
+
+.show {
+  visibility: show;
+}
+
+.hide {
+  visibility: hidden;
 }
 /*# sourceMappingURL=style.css.map */

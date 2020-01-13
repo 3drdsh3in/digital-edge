@@ -67,3 +67,11 @@ $(document).ready(function () {
 // .nav-icon:after
 // .nav-icon:before
 // .nav-icon div
+
+// Carousel Code:
+
+const price_item = ["Basic", "Standard", "Professional"];
+
+// Button References via JS DOM.
+const left_button = document.querySelector('.fa-chevron-left')
+const right_button = document.querySelector('.fa-chevron-right')
