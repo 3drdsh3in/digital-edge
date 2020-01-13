@@ -43,7 +43,7 @@ body, html {
 .nav-links li {
   list-style-type: none;
   margin: 15px 5px;
-  background-color: #fff;
+  background-color: #b3b3b3d0;
   height: 35px;
   margin: 0px;
 }
@@ -190,6 +190,10 @@ body, html {
   font-weight: 500;
 }
 
+.header-edge {
+  color: black;
+}
+
 .header-left-summary {
   display: block;
   margin: 2rem 0;
@@ -224,6 +228,7 @@ body, html {
   text-transform: uppercase;
   border: 5px black solid;
   border-radius: 40px;
+  cursor: pointer;
 }
 
 .summary-container {
@@ -263,6 +268,7 @@ body, html {
   background-color: #fff;
   position: relative;
   margin: 4rem 0;
+  min-height: 350px;
 }
 
 .plan-title {
@@ -279,8 +285,8 @@ body, html {
   margin: 1.5rem auto;
 }
 
-.fa-chevron-left,
-.fa-chevron-right {
+.fa-chevron-left.carousel-button,
+.fa-chevron-right.carousel-button {
   color: #30343F;
   position: relative;
   z-index: 1;
@@ -288,11 +294,11 @@ body, html {
   cursor: pointer;
 }
 
-.fa-chevron-left {
+.fa-chevron-left.carousel-button {
   right: 41.5%;
 }
 
-.fa-chevron-right {
+.fa-chevron-right.carousel-button {
   left: 41.5%;
 }
 
@@ -345,11 +351,244 @@ body, html {
   margin: 1rem 0;
 }
 
-.show {
-  visibility: show;
-}
-
 .hide {
   visibility: hidden;
+}
+
+.slide-appear-left-mob {
+  -webkit-animation: slide-appear-left-mob 2s 0s;
+          animation: slide-appear-left-mob 2s 0s;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+}
+
+@-webkit-keyframes slide-appear-left-mob {
+  from {
+    -webkit-transform: translate(100px);
+            transform: translate(100px);
+    opacity: 0;
+  }
+  to {
+    -webkit-transform: translate(0px);
+            transform: translate(0px);
+    opacity: 1;
+  }
+}
+
+@keyframes slide-appear-left-mob {
+  from {
+    -webkit-transform: translate(100px);
+            transform: translate(100px);
+    opacity: 0;
+  }
+  to {
+    -webkit-transform: translate(0px);
+            transform: translate(0px);
+    opacity: 1;
+  }
+}
+
+.slide-appear-right-mob {
+  -webkit-animation: slide-appear-right-mob 2s 0s;
+          animation: slide-appear-right-mob 2s 0s;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+}
+
+@-webkit-keyframes slide-appear-right-mob {
+  from {
+    -webkit-transform: translate(-100px);
+            transform: translate(-100px);
+    opacity: 0;
+  }
+  to {
+    -webkit-transform: translate(0px);
+            transform: translate(0px);
+    opacity: 1;
+  }
+}
+
+@keyframes slide-appear-right-mob {
+  from {
+    -webkit-transform: translate(-100px);
+            transform: translate(-100px);
+    opacity: 0;
+  }
+  to {
+    -webkit-transform: translate(0px);
+            transform: translate(0px);
+    opacity: 1;
+  }
+}
+
+.slide-disappear-right-mob {
+  -webkit-animation: slide-disappear-right-mob 2s 0s;
+          animation: slide-disappear-right-mob 2s 0s;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+}
+
+@-webkit-keyframes slide-disappear-right-mob {
+  from {
+    -webkit-transform: translate(0px);
+            transform: translate(0px);
+    opacity: 1;
+  }
+  to {
+    -webkit-transform: translate(100px);
+            transform: translate(100px);
+    opacity: 0;
+  }
+}
+
+@keyframes slide-disappear-right-mob {
+  from {
+    -webkit-transform: translate(0px);
+            transform: translate(0px);
+    opacity: 1;
+  }
+  to {
+    -webkit-transform: translate(100px);
+            transform: translate(100px);
+    opacity: 0;
+  }
+}
+
+.slide-disappear-left-mob {
+  -webkit-animation: slide-disappear-left-mob 1s 0s;
+          animation: slide-disappear-left-mob 1s 0s;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+}
+
+@-webkit-keyframes slide-disappear-left-mob {
+  from {
+    -webkit-transform: translate(0px);
+            transform: translate(0px);
+    opacity: 1;
+  }
+  to {
+    -webkit-transform: translate(-100px);
+            transform: translate(-100px);
+    opacity: 0;
+  }
+}
+
+@keyframes slide-disappear-left-mob {
+  from {
+    -webkit-transform: translate(0px);
+            transform: translate(0px);
+    opacity: 1;
+  }
+  to {
+    -webkit-transform: translate(-100px);
+            transform: translate(-100px);
+    opacity: 0;
+  }
+}
+
+.main-footer {
+  color: #b3b3b3d0;
+  background-color: #30343F;
+  text-align: center;
+}
+
+.main-footer h1 {
+  padding: 1.2rem 0;
+}
+
+.footer-flex-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.footer-icon-header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  color: #fff;
+}
+
+.footer-icon-header i {
+  color: #DB5461;
+}
+
+.footer-icon-header h1 {
+  margin: 0 0.8rem;
+}
+
+.learn-more-link a {
+  color: #DB5461;
+  text-decoration: none;
+}
+
+.learn-more-link i {
+  margin: 0 0.3rem;
+}
+
+.footer-contacts {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  width: 90%;
+  margin: 0 auto;
+  color: #fff;
+}
+
+.main-footer h1 {
+  color: #fff;
+}
+
+.main-footer hr {
+  width: 90%;
+  border: 2px #b3b3b3d0 solid;
+  margin: 0 auto;
+}
+
+.footer-phone {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+}
+
+.footer-phone i {
+  margin: 0 0.8rem;
+}
+
+.footer-flex-item {
+  width: 70%;
+}
+
+.copyright p {
+  padding: 10px 0px;
 }
 /*# sourceMappingURL=style.css.map */
