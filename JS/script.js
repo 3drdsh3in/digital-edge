@@ -15,11 +15,9 @@ function toggleLinks(mediaObject) {
     }
     if (mediaObject.matches) {
         navLinksRef.style.display = "flex";
-        console.log('a')
     }
     else {
         navLinksRef.style.display = "none";
-        console.log('b')
     }
 }
 

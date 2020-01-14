@@ -14,27 +14,31 @@
     <link href="https://fonts.googleapis.com/css?family=Open+Sans|Source+Sans+Pro&display=swap" rel="stylesheet">
 
     <!-- jQuery -->
-    <script src="node_modules/jquery/dist/jquery.js"></script>
+    <!-- <script src="node_modules/jquery/dist/jquery.js"></script> -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 
+    <!-- AOS Scroll -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 </head>
 
 <body>
     <nav>
         <div class="navbar">
-            <div class="nav-icon">
+            <div class="nav-icon" data-aos="fade-zoom-in" data-aos-duration="1000">
                 <div class="first"></div>
                 <div class="middle"></div>
                 <div class="last"></div>
             </div>
             <!-- <i class="fas fa-bars fa-3x" id="book_bars"></i> -->
-            <ul class="nav-links">
+            <ul class="nav-links" data-aos="fade-zoom-in" data-aos-duration="1000">
                 <div class="drop-down-bg"></div>
                 <li><a href="#" class="nav-link top-link">Home</a></li>
                 <li><a href="#" class="nav-link">Services</a></li>
                 <li><a href="#" class="nav-link">Clients</a></li>
                 <li><a href="#" class="nav-link">Contacts</a></li>
             </ul>
-            <a href="#"><i class="fas fa-mobile fa-3x"></i></a>
+            <a href="#"><i class="fas fa-mobile fa-3x" data-aos="fade-zoom-in" data-aos-duration="1000"></i></a>
         </div>
     </nav>
     <header class="main-header">
@@ -53,7 +57,7 @@
                 <p>We <span class="span-digitalize">Digitalise</span></p>
                 <p>Your Business Ideas.</p>
             </div>
-            <div class="header-button">
+            <div class="header-button" data-aos="fade-right">
                 <a href="#"><button>Learn More</button></a>
             </div>
         </div>
@@ -62,15 +66,15 @@
     <main class="main-body">
         <section class="marketing-summary">
             <div class="summary-container">
-                <div class="summary-item">
+                <div class="summary-item" data-aos="fade-up">
                     <i class="fas fa-map-marker-alt fa-2x"></i>
                     <p>Located In <span> 12 </span> Countries. </p>
                 </div>
-                <div class="summary-item">
+                <div class="summary-item" data-aos="fade-up">
                     <i class="far fa-smile fa-2x"></i>
                     <p>Over 2000 Satisfied Clients.</p>
                 </div>
-                <div class="summary-item">
+                <div class="summary-item" data-aos="fade-up">
                     <i class="fas fa-user-tie fa-2x"></i>
                     <p>Professional UI/UX Design</p>
                 </div>
@@ -78,12 +82,12 @@
         </section>
         <section class="plan-section">
             <div class="plan-body">
-                <p class="plan-title">Pricing</p>
+                <p class="plan-title" data-aos="zoom-in">Pricing</p>
                 <hr>
                 <div class="carousel-container" id="carousel">
                     <!-- Carousel: Left -->
-                    <i class="fas fa-chevron-left carousel-button fa-4x"></i>
-                    <div class="carousel-item hide basic">
+                    <i class="fas fa-chevron-left carousel-button fa-4x" data-aos="fade-zoom-in"></i>
+                    <div class="carousel-item hide basic" data-aos="zoom-in">
                         <div class="plan-name">
                             <h1>Basic</h1>
                         </div>
@@ -94,7 +98,7 @@
                             <a href="#"><button>Learn More</button></a>
                         </div>
                     </div>
-                    <div class="carousel-item standard">
+                    <div class="carousel-item standard" data-aos="zoom-in">
                         <div class="plan-name">
                             <h1>Standard</h1>
                         </div>
@@ -105,7 +109,7 @@
                             <a href="#"><button>Learn More</button></a>
                         </div>
                     </div>
-                    <div class="carousel-item hide deluxe">
+                    <div class="carousel-item hide deluxe" data-aos="zoom-in">
                         <div class="plan-name pro">
                             <h1>Deluxe</h1>
                         </div>
@@ -117,15 +121,15 @@
                         </div>
                     </div>
                     <!-- Carousel: Right -->
-                    <i class="fas fa-chevron-right carousel-button fa-4x"></i>
+                    <i class="fas fa-chevron-right carousel-button fa-4x" data-aos="fade-zoom-in"></i>
                 </div>
             </div>
         </section>
         <footer class="main-footer">
-            <h1>We have more</h1>
+            <h1 data-aos="zoom-in">We have more</h1>
             <hr>
             <div class="footer-flex-container">
-                <div class="footer-flex-item">
+                <div class="footer-flex-item" data-aos="fade-up">
                     <div class="footer-icon-header">
                         <i class="fas fa-power-off fa-2x"></i>
                         <h2>Easy Process</h2>
@@ -138,7 +142,7 @@
                         <i class="fas fa-chevron-right"></i>
                     </div>
                 </div>
-                <div class="footer-flex-item">
+                <div class="footer-flex-item" data-aos="fade-up">
                     <div class="footer-icon-header">
                         <i class="fas fa-desktop fa-2x"></i>
                         <h2>Improved Online Presence</h2>
@@ -151,7 +155,7 @@
                         <i class="fas fa-chevron-right"></i>
                     </div>
                 </div>
-                <div class="footer-flex-item">
+                <div class="footer-flex-item" data-aos="fade-up">
                     <div class="footer-icon-header">
                         <i class="fas fa-database fa-2x"></i>
                         <h2>Secure data</2>
@@ -167,16 +171,22 @@
                 </div>
             </div>
             <div class="footer-contacts">
-                <div class="footer-phone">
+                <div class="footer-phone" data-aos="fade-in" data-aos-anchor-placement="top-bottom"
+                    data-aos-duration="300">
                     <i class="fas fa-phone"></i>
                     <p>777-777-7777</p>
                 </div>
                 <div class="footer-other-contacts">
-                    <a href="#"><i class="fab fa-facebook-square"></i></a>
-                    <a href="#"><i class="fab fa-twitter-square"></i></a>
-                    <a href="#"><i class="fab fa-linkedin"></i></a>
-                    <a href="#"><i class="fab fa-instagram"></i></a>
-                    <a href="#"><i class="fab fa-google-plus-square"></i></a>
+                    <a href="#"><i class="fab fa-facebook-square" data-aos="fade-right" data-aos-delay="1200"
+                            data-aos-anchor-placement="top-bottom"></i></a>
+                    <a href="#"><i class="fab fa-twitter-square" data-aos="fade-right" data-aos-delay="900"
+                            data-aos-anchor-placement="top-bottom"></i></a>
+                    <a href="#"><i class="fab fa-linkedin" data-aos="fade-right" data-aos-delay="600"
+                            data-aos-anchor-placement="top-bottom"></i></a>
+                    <a href="#"><i class="fab fa-instagram" data-aos="fade-right" data-aos-delay="300"
+                            data-aos-anchor-placement="top-bottom"></i></a>
+                    <a href="#"><i class="fab fa-google-plus-square" data-aos="fade-right"
+                            data-aos-anchor-placement="top-bottom"></i></a>
                 </div>
             </div>
             <hr>
@@ -187,6 +197,10 @@
     </main>
 
     <script src="./JS/script.js"></script>
+    <!-- AOS Init -->
+    <script>
+        AOS.init();
+    </script>
 </body>
 
 </html>
