@@ -372,11 +372,21 @@ body, html {
 
 .fa-chevron-left.carousel-button,
 .fa-chevron-right.carousel-button {
-  color: #30343F;
+  color: black;
   position: relative;
   z-index: 1;
   top: 90px;
   cursor: pointer;
+  -webkit-transition: all 0s 0s;
+  transition: all 0s 0s;
+  z-index: 20;
+}
+
+.fa-chevron-left.carousel-button:hover,
+.fa-chevron-right.carousel-button:hover {
+  -webkit-transition: all 0s 0s;
+  transition: all 0s 0s;
+  color: rgba(0, 0, 0, 0.5);
 }
 
 .fa-chevron-left.carousel-button {

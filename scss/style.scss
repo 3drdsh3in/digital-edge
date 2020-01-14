@@ -344,12 +344,22 @@ body, html {
 // Carousel: General Formatting
 .fa-chevron-left.carousel-button,
 .fa-chevron-right.carousel-button {
-    color: $secondary-bg-color;
+    color: $text-color;
     position: relative;
     z-index: 1;
 
     top: 90px;
     cursor: pointer;
+
+    transition: all 0s 0s;
+
+    z-index: 20;
+}
+
+.fa-chevron-left.carousel-button:hover,
+.fa-chevron-right.carousel-button:hover {
+    transition: all 0s 0s;
+    color: $hover-text-color;
 }
 
 .fa-chevron-left.carousel-button {
