@@ -542,6 +542,12 @@ body, html {
 .learn-more-link a {
     color: $secondary-theme-color;
     text-decoration: none;
+    transition: color 0s 0s;
+}
+
+.learn-more-link a:hover {
+    transition: color 0s 0s;
+    color: $hover-secondary-theme-color;
 }
 
 .learn-more-link i {

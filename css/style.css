@@ -148,7 +148,7 @@ body, html {
 }
 
 .header-left::after {
-  background-color: #DB5461;
+  background-color: #be2835;
   content: '';
   position: absolute;
   top: 0;
@@ -165,7 +165,7 @@ body, html {
 .header-right {
   width: 100%;
   height: 50rem;
-  background: #DB5461 url(../images/group-of-people-sitting-near-table-1181396.jpg) no-repeat left;
+  background: #be2835 url(../images/group-of-people-sitting-near-table-1181396.jpg) no-repeat left;
   background-size: cover;
   z-index: -1;
 }
@@ -430,7 +430,7 @@ body, html {
 }
 
 .plan-name.pro {
-  background-color: #DB5461;
+  background-color: #be2835;
 }
 
 .plan-element {
@@ -438,8 +438,8 @@ body, html {
 }
 
 .item-footer button {
-  color: #DB5461;
-  border: 2px solid #DB5461;
+  color: #be2835;
+  border: 2px solid #be2835;
   background: #fff;
   border-radius: 10px;
   padding: 0.4rem 3rem;
@@ -453,7 +453,7 @@ body, html {
   -webkit-transition: all 0.5s ease-in 0s;
   transition: all 0.5s ease-in 0s;
   color: #fff;
-  background: #DB5461;
+  background: #be2835;
 }
 
 .hide {
@@ -640,7 +640,7 @@ body, html {
 }
 
 .footer-icon-header i {
-  color: #DB5461;
+  color: #be2835;
 }
 
 .footer-icon-header h2 {
@@ -651,8 +651,16 @@ body, html {
 }
 
 .learn-more-link a {
-  color: #DB5461;
+  color: #be2835;
   text-decoration: none;
+  -webkit-transition: color 0s 0s;
+  transition: color 0s 0s;
+}
+
+.learn-more-link a:hover {
+  -webkit-transition: color 0s 0s;
+  transition: color 0s 0s;
+  color: #be2835cd;
 }
 
 .learn-more-link i {
