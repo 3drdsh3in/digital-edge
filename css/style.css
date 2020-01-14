@@ -26,18 +26,28 @@ body, html {
   width: 100vw;
   background-color: #b3b3b3d0;
   z-index: 1000;
+  border-bottom: 1px black solid;
 }
 
 .navbar i {
   color: #fff;
   margin: 12px 20px;
+  -webkit-transition: all 0s ease-in 0s;
+  transition: all 0s ease-in 0s;
+  color: #fff;
+}
+
+.navbar i:hover {
+  -webkit-transition: all 0s ease-in 0s;
+  transition: all 0s ease-in 0s;
+  color: rgba(255, 255, 255, 0.8);
 }
 
 .nav-links {
   display: none;
   position: absolute;
   width: 100vw;
-  top: 72px;
+  top: 76px;
 }
 
 .nav-links li {
@@ -184,6 +194,10 @@ body, html {
   font-weight: 100;
 }
 
+.header-left-contents a {
+  text-decoration: none;
+}
+
 .header-left-contents .header-name {
   width: 5vw;
   font-size: 1.9rem;
@@ -226,9 +240,55 @@ body, html {
   font-weight: 700;
   padding: 10px 30px;
   text-transform: uppercase;
+  color: black;
   border: 5px black solid;
   border-radius: 40px;
   cursor: pointer;
+  position: relative;
+  -webkit-transition: all 0.5s ease-in 0s;
+  transition: all 0.5s ease-in 0s;
+  background: white;
+  -webkit-transform: translateY(0px);
+          transform: translateY(0px);
+}
+
+.header-button button:hover {
+  -webkit-transition: all 0.5s ease-in 0s;
+  transition: all 0.5s ease-in 0s;
+  color: #fff;
+  background: black;
+  -webkit-transform: translateY(-10px);
+          transform: translateY(-10px);
+}
+
+@-webkit-keyframes fill-jump-animation {
+  0% {
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(white, white));
+    background: linear-gradient(white white);
+  }
+  50% {
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(black, white));
+    background: linear-gradient(white black);
+  }
+  100% {
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(black, black));
+    background: linear-gradient(black black);
+  }
+}
+
+@keyframes fill-jump-animation {
+  0% {
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(white, white));
+    background: linear-gradient(white white);
+  }
+  50% {
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(black, white));
+    background: linear-gradient(white black);
+  }
+  100% {
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(black, black));
+    background: linear-gradient(black black);
+  }
 }
 
 .summary-container {
@@ -255,6 +315,15 @@ body, html {
   -webkit-box-flex: 1;
       -ms-flex: 1 1 34%;
           flex: 1 1 34%;
+  -webkit-transition: all 0.5s ease-in 0s;
+  transition: all 0.5s ease-in 0s;
+  color: #fff;
+}
+
+.summary-item:hover {
+  -webkit-transition: all 0.5s ease-in 0s;
+  transition: all 0.5s ease-in 0s;
+  color: #b3b3b3d0;
 }
 
 .summary-item p {
@@ -262,6 +331,22 @@ body, html {
   -ms-flex-item-align: center;
       -ms-grid-row-align: center;
       align-self: center;
+}
+
+@media screen and (min-width: 768px) {
+  .summary-container {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+  }
+  .summary-item {
+    -webkit-box-flex: 0;
+        -ms-flex: 0 0 15%;
+            flex: 0 0 15%;
+  }
 }
 
 .plan-body {
@@ -345,14 +430,24 @@ body, html {
 .item-footer button {
   color: #DB5461;
   border: 2px solid #DB5461;
-  background-color: #fff;
+  background: #fff;
   border-radius: 10px;
   padding: 0.4rem 3rem;
   margin: 1rem 0;
+  cursor: pointer;
+  -webkit-transition: all 0.5s ease-in 0s;
+  transition: all 0.5s ease-in 0s;
+}
+
+.item-footer button:hover {
+  -webkit-transition: all 0.5s ease-in 0s;
+  transition: all 0.5s ease-in 0s;
+  color: #fff;
+  background: #DB5461;
 }
 
 .hide {
-  visibility: hidden;
+  display: none;
 }
 
 .slide-appear-left-mob {
@@ -360,6 +455,7 @@ body, html {
           animation: slide-appear-left-mob 2s 0s;
   -webkit-animation-fill-mode: forwards;
           animation-fill-mode: forwards;
+  z-index: 10;
 }
 
 @-webkit-keyframes slide-appear-left-mob {
@@ -393,6 +489,7 @@ body, html {
           animation: slide-appear-right-mob 2s 0s;
   -webkit-animation-fill-mode: forwards;
           animation-fill-mode: forwards;
+  z-index: 10;
 }
 
 @-webkit-keyframes slide-appear-right-mob {
@@ -422,8 +519,8 @@ body, html {
 }
 
 .slide-disappear-right-mob {
-  -webkit-animation: slide-disappear-right-mob 2s 0s;
-          animation: slide-disappear-right-mob 2s 0s;
+  -webkit-animation: slide-disappear-right-mob 1s 0s;
+          animation: slide-disappear-right-mob 1s 0s;
   -webkit-animation-fill-mode: forwards;
           animation-fill-mode: forwards;
 }
@@ -527,12 +624,20 @@ body, html {
   color: #fff;
 }
 
+.footer-flex-item {
+  width: 70%;
+  margin: 2rem;
+}
+
 .footer-icon-header i {
   color: #DB5461;
 }
 
-.footer-icon-header h1 {
-  margin: 0 0.8rem;
+.footer-icon-header h2 {
+  margin: 0.8rem;
+  text-transform: uppercase;
+  font-size: 1rem;
+  font-weight: 900;
 }
 
 .learn-more-link a {
@@ -542,6 +647,15 @@ body, html {
 
 .learn-more-link i {
   margin: 0 0.3rem;
+}
+
+@media screen and (min-width: 992px) {
+  .footer-flex-container {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+  }
 }
 
 .footer-contacts {
@@ -555,8 +669,11 @@ body, html {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   width: 90%;
-  margin: 0 auto;
+  margin: 0.4rem auto;
   color: #fff;
 }
 
@@ -584,8 +701,20 @@ body, html {
   margin: 0 0.8rem;
 }
 
-.footer-flex-item {
-  width: 70%;
+.fab {
+  color: #fff;
+}
+
+.footer-other-contacts i {
+  -webkit-transition: margin-left 0.5s;
+  transition: margin-left 0.5s;
+  margin-left: 0px;
+}
+
+.footer-other-contacts i:hover {
+  -webkit-transition: margin-left 0.5s;
+  transition: margin-left 0.5s;
+  margin-left: 5px;
 }
 
 .copyright p {

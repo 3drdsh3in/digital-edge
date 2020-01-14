@@ -68,19 +68,15 @@ jQuery(function () {
 // .nav-icon:before
 // .nav-icon div
 
-// Button References via JS DOM:
-// const left_button = document.querySelector('.fa-chevron-left');
-// const right_button = document.querySelector('.fa-chevron-right');
-
-// Carousel Code:
-// $('tagName').toggleClass('selectorName')
-
+// Carousel: Mobile Viewports
 jQuery(function () {
     const price_item = [".basic", ".standard", ".deluxe"];
-    const mobAnimationNames = ["slide-appear-left-mob", "slide-disappear-left-mob", "slide-appear-right-mob", "slide-disappear-right-mob", "hide"];
     var viewIndex = 1;
+
+    // 
+    var slideReady = true;
+
     // References to every carousel plan:
-    const planItems = document.querySelectorAll('.carousel-item');
 
     setInterval(function () {
         function Increment(indexVal) {
@@ -101,20 +97,27 @@ jQuery(function () {
                 return 2;
             }
         }
+        if (slideReady) {
+            // Remove Potential Animation Class Elements:
+            $('.basic').removeClass("slide-appear-left-mob slide-disappear-left-mob slide-appear-right-mob slide-disappear-right-mob hide")
+            $('.standard').removeClass("slide-appear-left-mob slide-disappear-left-mob slide-appear-right-mob slide-disappear-right-mob hide")
+            $('.deluxe').removeClass("slide-appear-left-mob slide-disappear-left-mob slide-appear-right-mob slide-disappear-right-mob hide")
 
-        // Remove Animation Class Elements:
-        $('.basic').removeClass("slide-appear-left-mob slide-disappear-left-mob slide-appear-right-mob slide-disappear-right-mob hide")
-        $('.standard').removeClass("slide-appear-left-mob slide-disappear-left-mob slide-appear-right-mob slide-disappear-right-mob hide")
-        $('.deluxe').removeClass("slide-appear-left-mob slide-disappear-left-mob slide-appear-right-mob slide-disappear-right-mob hide")
-
-        // Decrease viewIndex value.
-        viewIndex = Increment(viewIndex);
-        console.log(viewIndex);
-        $(price_item[viewIndex]).toggleClass('slide-appear-right-mob')
-        $(price_item[Decrement(viewIndex)]).toggleClass('slide-disappear-right-mob')
-        $(price_item[Increment(viewIndex)]).toggleClass('hide')
+            // Decrease viewIndex value.
+            viewIndex = Increment(viewIndex);
+            console.log(viewIndex);
+            $(price_item[viewIndex]).toggleClass('slide-appear-right-mob')
+            $(price_item[Decrement(viewIndex)]).toggleClass('slide-disappear-right-mob')
+            $(price_item[Increment(viewIndex)]).toggleClass('hide')
+        }
+        // 
+        slideReady = false;
     }
         , 8000);
+
+    setInterval(function () {
+        slideReady = true;
+    }, 2500);
 
     $('.fa-chevron-left').click(() => {
         function Increment(indexVal) {
@@ -135,16 +138,20 @@ jQuery(function () {
                 return 2;
             }
         }
-        // Remove Animation Class Elements:
-        $('.basic').removeClass("slide-appear-left-mob slide-disappear-left-mob slide-appear-right-mob slide-disappear-right-mob hide")
-        $('.standard').removeClass("slide-appear-left-mob slide-disappear-left-mob slide-appear-right-mob slide-disappear-right-mob hide")
-        $('.deluxe').removeClass("slide-appear-left-mob slide-disappear-left-mob slide-appear-right-mob slide-disappear-right-mob hide")
-        // Decrease viewIndex value.
-        viewIndex = Decrement(viewIndex);
-        console.log(viewIndex);
-        $(price_item[viewIndex]).toggleClass('slide-appear-left-mob')
-        $(price_item[Decrement(viewIndex)]).toggleClass('slide-disappear-left-mob')
-        $(price_item[Increment(viewIndex)]).toggleClass('hide')
+        if (slideReady) {
+            // Remove Potential Animation Class Elements:
+            $('.basic').removeClass("slide-appear-left-mob slide-disappear-left-mob slide-appear-right-mob slide-disappear-right-mob hide")
+            $('.standard').removeClass("slide-appear-left-mob slide-disappear-left-mob slide-appear-right-mob slide-disappear-right-mob hide")
+            $('.deluxe').removeClass("slide-appear-left-mob slide-disappear-left-mob slide-appear-right-mob slide-disappear-right-mob hide")
+            // Decrease viewIndex value.
+            viewIndex = Decrement(viewIndex);
+            console.log(viewIndex);
+            $(price_item[viewIndex]).toggleClass('slide-appear-left-mob')
+            $(price_item[Decrement(viewIndex)]).toggleClass('slide-disappear-left-mob')
+            $(price_item[Increment(viewIndex)]).toggleClass('hide')
+
+            slideReady = false;
+        }
     })
     $('.fa-chevron-right').click(() => {
         function Increment(indexVal) {
@@ -165,16 +172,25 @@ jQuery(function () {
                 return 2;
             }
         }
-        // Remove Animation Class Elements:
-        $('.basic').removeClass("slide-appear-left-mob slide-disappear-left-mob slide-appear-right-mob slide-disappear-right-mob hide")
-        $('.standard').removeClass("slide-appear-left-mob slide-disappear-left-mob slide-appear-right-mob slide-disappear-right-mob hide")
-        $('.deluxe').removeClass("slide-appear-left-mob slide-disappear-left-mob slide-appear-right-mob slide-disappear-right-mob hide")
+        // Remove Potential Animation Class Elements:
+        // VANILLA JAVASCRIPT METHOD:
+        // Should have given each item ids such as: id='basic'
+        // THEN: document.getElementById('basic').classList.remove('hide')
+        // THEN: document.getElementById('basic').classList.remove('slide-disappear-left-mob') .ect (Loop remove all classes.)
 
-        // Decrease viewIndex value.
-        viewIndex = Increment(viewIndex);
-        console.log(viewIndex);
-        $(price_item[viewIndex]).toggleClass('slide-appear-right-mob')
-        $(price_item[Decrement(viewIndex)]).toggleClass('slide-disappear-right-mob')
-        $(price_item[Increment(viewIndex)]).toggleClass('hide')
+        if (slideReady) {
+            $('.basic').removeClass("slide-appear-left-mob slide-disappear-left-mob slide-appear-right-mob slide-disappear-right-mob hide")
+            $('.standard').removeClass("slide-appear-left-mob slide-disappear-left-mob slide-appear-right-mob slide-disappear-right-mob hide")
+            $('.deluxe').removeClass("slide-appear-left-mob slide-disappear-left-mob slide-appear-right-mob slide-disappear-right-mob hide")
+
+            // Decrease viewIndex value.
+            viewIndex = Increment(viewIndex);
+            console.log(viewIndex);
+            $(price_item[viewIndex]).toggleClass('slide-appear-right-mob')
+            $(price_item[Decrement(viewIndex)]).toggleClass('slide-disappear-right-mob')
+            $(price_item[Increment(viewIndex)]).toggleClass('hide')
+
+            slideReady = false;
+        }
     })
 });
