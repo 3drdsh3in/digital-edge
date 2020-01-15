@@ -62,6 +62,31 @@ jQuery(function () {
     })
 });
 
+// Phone Icon Header Change:
+smallPhoneWidthObject = window.matchMedia('(min-width: 600px)');
+headerIconRef = document.getElementById('header-icon');
+
+if (smallPhoneWidthObject.matches) {
+    headerIconRef.classList.add('fa-4x')
+    headerIconRef.classList.remove('fa-2x')
+}
+else {
+    $('.fa-mobile').addClass('fa-2x');
+    $('.fa-mobile').removeClass('fa-4x');
+}
+
+function changeHeaderIcon() {
+    if (smallPhoneWidthObject.matches) {
+        headerIconRef.classList.add('fa-4x')
+        headerIconRef.classList.remove('fa-2x')
+    }
+    else {
+        $('.fa-mobile').addClass('fa-2x');
+        $('.fa-mobile').removeClass('fa-4x');
+    }
+}
+smallPhoneWidthObject.addListener(changeHeaderIcon)
+
 // .nav-icon:after
 // .nav-icon:before
 // .nav-icon div
