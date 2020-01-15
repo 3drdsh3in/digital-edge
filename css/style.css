@@ -306,7 +306,7 @@ body, html {
 @media screen and (max-width: 600px) {
   .header-button {
     left: 1rem;
-    top: 22rem;
+    top: 21rem;
   }
   .header-button button {
     font-size: 0.7rem;
