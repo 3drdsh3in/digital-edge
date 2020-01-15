@@ -164,7 +164,7 @@ body, html {
 
 @media screen and (min-width: 600px) {
   .header-left::after {
-    left: -50%;
+    left: -60%;
     height: 50rem;
   }
   .header-right.overwrite-bg-height {
@@ -176,7 +176,9 @@ body, html {
   width: auto;
   max-width: 100%;
   height: 25rem;
-  background: #be2835 url(../images/group-of-people-sitting-near-table-1181396.jpg) no-repeat center;
+  background: #be2835 url(../images/group-of-people-sitting-near-table-1181396.jpg);
+  background-repeat: no-repeat;
+  background-position: center center;
   background-size: cover;
   z-index: -1;
 }
