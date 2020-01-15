@@ -363,11 +363,23 @@ body, html {
 }
 
 .fa-chevron-left.carousel-button {
-    right: 41.5%;
+    right: 34%;
 }
 
 .fa-chevron-right.carousel-button {
-    left: 41.5%;
+    left: 34%;
+}
+
+@media screen and (min-width: 768px) {
+    .carousel-item {
+        width: 80%;
+    }
+    .fa-chevron-left.carousel-button {
+        right: 41.5%;
+    }
+    .fa-chevron-right.carousel-button {
+        left: 41.5%;
+    }
 }
 
 .carousel-container {
@@ -380,7 +392,7 @@ body, html {
 .carousel-item {
     box-shadow: 2px 2px 20px 1px rgba(0, 0, 0, .2);
     position: absolute;
-    width: 80%;
+    width: 60%;
     margin: 0 0 5rem 0;
 }
 
