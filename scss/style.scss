@@ -166,7 +166,7 @@ body, html {
     top: 0;
     left: -70%;
     width: 100%;
-    height: 30rem;
+    height: 25rem;
     transform-origin: 100% 0;
     transform: skew(10deg);
     z-index: 1;
@@ -186,8 +186,9 @@ body, html {
     // width: 100%;
     width: auto ;
     max-width: 100% ;
-    height: 30rem;
-    background: $secondary-theme-color url(../images/group-of-people-sitting-near-table-1181396.jpg) no-repeat left;
+    height: 25rem;
+    background: $secondary-theme-color url(../images/group-of-people-sitting-near-table-1181396.jpg) no-repeat;
+    background-position: center center;
     background-size: cover;
     z-index: -1;
 }
@@ -218,7 +219,7 @@ body, html {
 }
 
 .header-left-contents .header-name {
-    width: 5vw;
+    width: 20vw;
     font-size: 1.9rem;
     font-weight: 500;
 }
@@ -292,7 +293,7 @@ body, html {
 @media screen and (max-width: 600px) {
     .header-button {
         left: 1rem;
-        top: 24rem;
+        top: 22rem;
     }
     .header-button button {
     font-size: 0.7rem;
