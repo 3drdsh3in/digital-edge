@@ -152,9 +152,9 @@ body, html {
   content: '';
   position: absolute;
   top: 0;
-  left: -60%;
+  left: -70%;
   width: 100%;
-  height: 50rem;
+  height: 30rem;
   -webkit-transform-origin: 100% 0;
           transform-origin: 100% 0;
   -webkit-transform: skew(10deg);
@@ -162,10 +162,20 @@ body, html {
   z-index: 1;
 }
 
+@media screen and (min-width: 600px) {
+  .header-left::after {
+    left: -50%;
+    height: 50rem;
+  }
+  .header-right.overwrite-bg-height {
+    height: 50rem;
+  }
+}
+
 .header-right {
   width: auto;
   max-width: 100%;
-  height: 50rem;
+  height: 30rem;
   background: #be2835 url(../images/group-of-people-sitting-near-table-1181396.jpg) no-repeat left;
   background-size: cover;
   z-index: -1;
@@ -289,6 +299,34 @@ body, html {
   100% {
     background: -webkit-gradient(linear, left top, left bottom, color-stop(black, black));
     background: linear-gradient(black black);
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .header-button {
+    left: 1rem;
+    top: 24rem;
+  }
+  .header-button button {
+    font-size: 0.7rem;
+    padding: 5px 12px;
+    font-weight: 700;
+  }
+  .header-left-summary {
+    left: 1rem;
+    font-size: 1rem;
+    top: 14rem;
+  }
+  .header-left-summary p {
+    width: 30vw;
+  }
+  .header-left-contents {
+    left: 1rem;
+    top: 5.5rem;
+    font-size: 1rem;
+  }
+  .header-left-contents .header-name {
+    font-size: 1.2rem;
   }
 }
 
@@ -649,7 +687,17 @@ body, html {
 
 .footer-flex-item {
   width: 70%;
-  margin: 2rem;
+  margin: 1rem 2rem;
+  background: #30343F;
+  -webkit-transition: background 1s ease-in 0s;
+  transition: background 1s ease-in 0s;
+  padding: 25px 15px;
+}
+
+div.footer-flex-item:hover {
+  background: #292C36;
+  -webkit-transition: background 1s ease-in 0s;
+  transition: background 1s ease-in 0s;
 }
 
 .footer-icon-header i {
