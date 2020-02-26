@@ -159,14 +159,20 @@ body, html {
 
 // Header:
 
+.header-left {
+    // position: absolute;
+}
+
 .header-left::after {
     background-color: $secondary-theme-color;
     content: '';
     position: absolute;
     top: 0;
-    left: -70%;
     width: 100%;
-    height: 25rem;
+
+    left: -70%;
+    height: 36rem;
+
     transform-origin: 100% 0;
     transform: skew(10deg);
     z-index: 1;
@@ -175,20 +181,24 @@ body, html {
 @media screen and (min-width: 600px) {
     .header-left::after {
         left: -60%;
-        height: 50rem;
+        height: 100vh;
     }
     .header-right.overwrite-bg-height {
-        height: 50rem;
+        height: 100vh;
     }
 }
 
+// ISSUE: RIGHT HEADER BACKGROUND IS FUCKING HIDEOUS HOW TO FIX? --- COMEBACK AFTER REACT PROJECT.
 .header-right {
     width: auto ;
     max-width: 100% ;
-    height: 25rem;
-    background: $secondary-theme-color url(../images/group-of-people-sitting-near-table-1181396.jpg);
-    background-repeat: no-repeat;
-    background-position: center center;
+
+    height: 36rem;
+
+    background: $secondary-theme-color url(../images/group-of-people-sitting-near-table-1181396.jpg) center center no-repeat;
+    background-attachment: fixed;
+    // background-repeat: no-repeat;
+    // background-position: center center;
     background-size: cover;
     // background-attachment: fixed;
     z-index: -1;
@@ -291,6 +301,7 @@ body, html {
     50% {  background: linear-gradient(white black)  }
     100% {  background: linear-gradient(black black)  }
 }
+// !!!
 @media screen and (max-width: 600px) {
     .header-button {
         left: 1rem;
@@ -301,7 +312,7 @@ body, html {
     padding: 5px 12px;
 
     font-weight: 700;
-}
+    }
     .header-left-summary {
         left: 1rem;
         font-size: 1rem;
@@ -336,13 +347,12 @@ body, html {
     display: flex;
     margin: 2rem 0;
     flex: 1 1 34%;
-
-    transition: all 0.5s ease-in 0s;
+    transition: color 0.5s ease-in 0s;
     color: $light-text-color;
 }
 
-.summary-item:hover {
-    transition: all 0.5s ease-in 0s;
+div.summary-item:hover {
+    transition: color 0.5s ease-in 0s;
     color: $primary-theme-color;
 }
 
@@ -604,14 +614,24 @@ div.footer-flex-item:hover {
     font-weight: 900;
 }
 
+.learn-more-link {
+    cursor: pointer;
+    margin: 0 auto;
+    max-width: 120px;
+    transition: transform 0.6s 0s;
+}
+.learn-more-link:hover {
+    transform: translateX(10px);
+}
+
 .learn-more-link a {
     color: $secondary-theme-color;
     text-decoration: none;
-    transition: color 0s 0s;
+    transition: color 0.4s 0s;
 }
 
 .learn-more-link a:hover {
-    transition: color 0s 0s;
+    transition: color 0.4s 0s;
     color: $hover-secondary-theme-color;
 }
 
