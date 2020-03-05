@@ -564,6 +564,7 @@ div.summary-item:hover {
 // Footer
 
 .main-footer {
+    padding: 50px 0;
     color: $primary-theme-color;
     background-color: $secondary-bg-color;
 
@@ -686,7 +687,7 @@ div.footer-flex-item:hover {
 
 .footer-other-contacts i:hover {
     transition: margin-left 0.5s;
-    margin-left: 5px;
+    margin-left: 10px;
 }
 
 .copyright p {

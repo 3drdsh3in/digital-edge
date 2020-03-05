@@ -647,6 +647,7 @@ div.summary-item:hover {
 }
 
 .main-footer {
+  padding: 50px 0;
   color: #b3b3b3d0;
   background-color: #30343F;
   text-align: center;
@@ -809,7 +810,7 @@ div.footer-flex-item:hover {
 .footer-other-contacts i:hover {
   -webkit-transition: margin-left 0.5s;
   transition: margin-left 0.5s;
-  margin-left: 5px;
+  margin-left: 10px;
 }
 
 .copyright p {
