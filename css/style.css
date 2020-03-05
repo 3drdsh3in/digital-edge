@@ -29,18 +29,22 @@ body, html {
   border-bottom: 1px black solid;
 }
 
-.navbar i {
-  color: #fff;
-  margin: 12px 20px;
-  -webkit-transition: all 0s ease-in 0s;
-  transition: all 0s ease-in 0s;
-  color: #fff;
+.navbar .nav-monitor {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
-.navbar i:hover {
-  -webkit-transition: all 0s ease-in 0s;
-  transition: all 0s ease-in 0s;
-  color: rgba(255, 255, 255, 0.8);
+.navbar .nav-monitor a img {
+  margin: 0 25px 0 0;
+  text-align: center;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+  width: 50px;
 }
 
 .nav-links {
@@ -210,8 +214,12 @@ body, html {
   text-decoration: none;
 }
 
+.header-left-contents a div img {
+  width: 100px;
+}
+
 .header-left-contents .header-name {
-  width: 20vw;
+  width: 200px;
   font-size: 1.9rem;
   font-weight: 500;
 }
@@ -328,6 +336,9 @@ body, html {
   }
   .header-left-contents .header-name {
     font-size: 1.2rem;
+  }
+  .header-left a div img {
+    width: 50px;
   }
 }
 

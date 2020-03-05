@@ -31,17 +31,19 @@ body, html {
     border-bottom: 1px black solid;
 }
 
-.navbar i {
-    color: $primary-bg-color;
-    margin: 12px 20px;
-
-    transition: all 0s ease-in 0s;
-    color: $light-text-color;
-}
-
-.navbar i:hover {
-    transition: all 0s ease-in 0s;
-    color: $light-hover-text-color;
+.navbar {
+    .nav-monitor {
+        display: flex;
+        align-items: center;
+        a {
+            img {
+                margin: 0 25px 0 0;
+                text-align: center;
+                align-self: center;
+                width: 50px;
+            }
+        }
+    }
 }
 
 .nav-links {
@@ -229,8 +231,12 @@ body, html {
     text-decoration: none;
 }
 
+.header-left-contents a div img {
+    width: 100px;
+}
+
 .header-left-contents .header-name {
-    width: 20vw;
+    width: 200px;
     font-size: 1.9rem;
     font-weight: 500;
 }
@@ -330,6 +336,9 @@ body, html {
     }
     .header-left-contents .header-name {
         font-size: 1.2rem;
+    }
+    .header-left a div img {
+        width: 50px;
     }
 
 }
