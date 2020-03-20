@@ -812,13 +812,13 @@ div.footer-flex-item:hover {
   color: #fff;
 }
 
-.footer-other-contacts i {
+.footer-other-contacts a {
   -webkit-transition: margin-left 0.5s;
   transition: margin-left 0.5s;
   margin-left: 0px;
 }
 
-.footer-other-contacts i:hover {
+.footer-other-contacts a:hover {
   -webkit-transition: margin-left 0.5s;
   transition: margin-left 0.5s;
   margin-left: 10px;
