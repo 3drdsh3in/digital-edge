@@ -17,6 +17,6 @@
   },
   "homepage": "https://github.com/3drdsh3in/digital-inception#readme",
   "dependencies": {
-    "jquery": "^3.4.1"
+    "jquery": "^3.5.0"
   }
 }
